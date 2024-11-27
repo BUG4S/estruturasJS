@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial: Estruturas de Repetição em JavaScript</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #e74c3c;
+        }
+        pre {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 1rem;
+            color: #2c3e50;
+        }
+        .exemplos {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Estruturas de Repetição em JavaScript</h1>
+</header>
+
+<main>
+    <h2>APRENDENDO SOBRE AS ESTRUTURAS DE REPETIÇÃO EM JS.</h2>
+    <p>As estruturas de repetição são essenciais para automatizar tarefas no JavaScript, poa elas permitem executar um bloco de código várias vezes sem a necessidade de repetir o mesmo código manualmente. As principais estruturas de repetição em JavaScript são:</p>
+    <ul>
+        <li><code>for</code></li>
+        <li><code>while</code></li>
+        <li><code>do...while</code></li>
+    </ul>
+    <p>Essas estruturas ajudam a tornar o código mais eficiente, permitindo que tarefas repetitivas sejam feitas de maneira rápida e limpa. Vamos explorar cada uma delas.</p>
+
+    <h2>Estrutura <code>for</code></h2>
+    <p>O <code>for</code> é usado quando sabemos exatamente quantas vezes o código precisa ser repetido. Sua sintaxe é:</p>
+    <pre><code>for (inicialização; condição; incremento) {
+    // código a ser executado
+}</code></pre>
+
+    <div class="exemplos">
+        <h3>Exemplo 1: Listando números de 1 a 10</h3>
+        <pre><code>for (let i = 1; i <= 10; i++) {
+    console.log(i);  // Exibe os números de 1 a 10
+}</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 2: Calculando o fatorial de um número</h3>
+        <pre><code>let numero = 5;
+let fatorial = 1;
+for (let i = 1; i <= numero; i++) {
+    fatorial *= i;
+}
+console.log(fatorial);  // Resultado: 120</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 3: Listando os números pares de 2 a 20</h3>
+        <pre><code>for (let i = 2; i <= 20; i += 2) {
+    console.log(i);  // Exibe os números pares de 2 a 20
+}</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 4: Contagem regressiva de 10 a 1</h3>
+        <pre><code>for (let i = 10; i >= 1; i--) {
+    console.log(i);  // Exibe os números de 10 a 1
+}</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 5: Listando números ímpares de 1 a 30</h3>
+        <pre><code>for (let i = 1; i <= 30; i += 2) {
+    console.log(i);  // Exibe os números ímpares de 1 a 30
+}</code></pre>
+    </div>
+
+    <h2>Estrutura <code>while</code></h2>
+    <p>O <code>while</code> é utilizado quando não sabemos o número exato de repetições, mas temos uma condição que deve ser satisfeita para continuar a execução. Sua sintaxe é:</p>
+    <pre><code>while (condição) {
+    // código a ser executado
+}</code></pre>
+
+    <div class="exemplos">
+        <h3>Exemplo 1: Soma dos números até que o total seja maior que 20</h3>
+        <pre><code>let soma = 0;
+let i = 1;
+while (soma <= 20) {
+    soma += i;
+    i++;
+}
+console.log(soma);  // Exibe o valor da soma quando ela ultrapassa 20</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 2: Contar quantas vezes um número aparece em um array</h3>
+        <pre><code>let numeros = [1, 2, 3, 4, 2, 2, 5];
+let contador = 0;
+let i = 0;
+while (i < numeros.length) {
+    if (numeros[i] === 2) {
+        contador++;
+    }
+    i++;
+}
+console.log(contador);  // Exibe 3, pois o número 2 aparece 3 vezes</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 3: Continuar pedindo a senha até que esteja correta</h3>
+        <pre><code>let senhaCorreta = "1234";
+let senhaUsuario;
+while (senhaUsuario !== senhaCorreta) {
+    senhaUsuario = prompt("Digite a senha:");
+}
+console.log("Senha correta!");</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 4: Criando um loop para processar dados enquanto houver elementos em um array</h3>
+        <pre><code>let dados = [1, 2, 3, 4, 5];
+let i = 0;
+while (dados[i] !== undefined) {
+    console.log(dados[i]);
+    i++;
+}</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 5: Criando uma fila de atendimento com espera condicional</h3>
+        <pre><code>let atendimento = ["Cliente 1", "Cliente 2", "Cliente 3"];
+while (atendimento.length > 0) {
+    let cliente = atendimento.shift();
+    console.log(`Atendendo ${cliente}`);
+}</code></pre>
+    </div>
+
+    <h2>Estrutura <code>do...while</code></h2>
+    <p>O <code>do...while</code> garante que o código será executado pelo menos uma vez, independentemente da condição inicial. Sua sintaxe é:</p>
+    <pre><code>do {
+    // código a ser executado
+} while (condição);</code></pre>
+
+    <div class="exemplos">
+        <h3>Exemplo 1: Pedir um valor aleatório até que seja maior que 5</h3>
+        <pre><code>let numero;
+do {
+    numero = Math.floor(Math.random() * 10) + 1;
+    console.log(numero);
+} while (numero <= 5);</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 2: Continuar exibindo a mensagem de erro até que o usuário digite a palavra correta</h3>
+        <pre><code>let palavra;
+do {
+    palavra = prompt("Digite 'OK' para continuar:");
+} while (palavra !== "OK");
+console.log("Palavra correta!");</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 3: Menu de opções repetido até que o usuário escolha a opção de sair</h3>
+        <pre><code>let opcao;
+do {
+    opcao = prompt("Escolha uma opção: 1) Iniciar, 2) Sair");
+} while (opcao !== "2");
+console.log("Saindo...");</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 4: Pedir o nome do usuário até que seja fornecido um nome válido</h3>
+        <pre><code>let nome;
+do {
+    nome = prompt("Qual é o seu nome?");
+} while (!nome);
+console.log(`Olá, ${nome}!`);</code></pre>
+    </div>
+
+    <div class="exemplos">
+        <h3>Exemplo 5: Validar o formato de um número de telefone</h3>
+        <pre><code>let telefone;
+do {
+    telefone = prompt("Digite seu telefone (formato: (XX) XXXX-XXXX):");
+} while (!/\(\d{2}\) \d{4}-\d{4}/.test(telefone));
+console.log("Telefone válido!");</code></pre>
+    </div>
+
+    <a href="#" class="btn">Voltar ao topo</a>
+
+</main>
+
+<footer>
+    <p>&copy; 2024 Tutorial JavaScript - Estruturas de Repetição</p>
+</footer>
+
+</body>
+</html>
